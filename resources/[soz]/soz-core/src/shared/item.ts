@@ -254,6 +254,10 @@ export type InventoryItemMetadata = {
     photosInDetectiveBoard?: string[];
     photoUrl?: string;
     evidenceInfos?: EvidenceMetadata;
+
+    // FFS Showroom
+    Components?: object;
+    Props?: object;
 };
 
 export type Inventory = {
@@ -280,6 +284,7 @@ export type InventoryItem = {
     unique: boolean;
     type: ItemType;
     amount: number;
+    itemExtraLabel?: string;
     metadata?: InventoryItemMetadata;
 };
 
