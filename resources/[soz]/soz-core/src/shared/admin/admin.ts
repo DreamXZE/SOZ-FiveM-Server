@@ -55,6 +55,7 @@ export type SkinSubMenuState = {
     maxOptions: {
         componentIndex?: Component;
         propIndex?: Prop;
+        maxTextures: number;
         maxDrawables: number;
     }[];
 };

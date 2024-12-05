@@ -123,6 +123,12 @@ const Draggable: FunctionComponent<Props> = ({ id, containerName, item, money, i
             
             itemExtraLabel = `[${crateWeight/1000}/12 Kg]`
             
+        } else if (item.type === 'item_outfit') {
+            itemLabel = item.label;
+            if (item?.metadata?.label) {
+                itemDescription += item.metadata.label;
+            }
+            itemExtraLabel += ` [${item.itemExtraLabel}]`
         } else if (item?.metadata?.expiration) {
             const currentTime = new Date().getTime();
             const expiration = new Date(item.metadata['expiration'])
